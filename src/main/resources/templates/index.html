@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"], input[type="button"] {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="button"] {
+            background-color: #007bff;
+        }
+        input[type="submit"]:hover, input[type="button"]:hover {
+            opacity: 0.8;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>Add Employee</h1>
+<form action="/employee/add" method="post">
+    <label for="id">Employee ID:</label>
+    <input type="text" id="id" name="id" required>
+
+    <label for="name">Employee Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Employee Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" required>
+
+    <input type="submit" value="Submit">
+</form>
+
+<input type="button" value="View All Employees" onclick="window.location.href='/employee/displayAll'">
+</body>
+</html>
+

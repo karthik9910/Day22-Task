@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Details</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    .detail-group {
+        margin-bottom: 15px;
+    }
+    .detail-group label {
+        font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Employee Details</h2>
+  <div class="detail-group">
+    <label>Employee ID:</label>
+    <span th:text="${employee.id}"></span>
+  </div>
+  <div class="detail-group">
+    <label>Name:</label>
+    <span th:text="${employee.name}"></span>
+  </div>
+  <div class="detail-group">
+    <label>Email:</label>
+    <span th:text="${employee.email}"></span>
+  </div>
+  <div class="detail-group">
+    <label>Location:</label>
+    <span th:text="${employee.location}"></span>
+  </div>
+  <a class="button" href="/employee/displayAll">Back to List</a>
+</div>
+</body>
+</html>
+
